@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	background-color: #6617cb;
+	background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
+}
+
+h6 {
+	text-align: center;
+	justify-content: center;
+	color: white;
+	font-size: 1.5rem;
+}
+h6 a {
+	color: red;
+}
+main {
+	display: flex;
+	flex-wrap: wrap;
+}
+.movie {
+	border-radius: 3px;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.9);
+	width: 300px;
+	color: white;
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.movie img {
+	width: 100%;
+	transition: transform 0.5s;
+}
+
+.movie img:hover {
+	transform: scale(1.2);
+}
+
+.movie-info {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1rem 1rem;
+	color: #eee;
+	letter-spacing: 0.5px;
+	align-items: center;
+}
+
+.movie-info h3 {
+	margin: 0;
+}
+
+.movie-info span {
+	background-color: rgba(146, 115, 146, 0.548);
+	padding: 0.25rem 0.5rem;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.movie-info span.green {
+	color: #18e618;
+}
+
+.movie-info span.orange {
+	color: orange;
+}
+
+.movie-info span.red {
+	color: red;
+}
+
+header {
+	display: flex;
+	background-color: #6617cb;
+	background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
+	padding: 0.5rem;
+	justify-content: flex-end;
+}
+
+.search {
+	padding: 0.5rem 1rem;
+	border-radius: 50px;
+	border: 2px solid;
+	background-color: #b953bb;
+	font-size: 1rem;
+	font-family: inherit;
+}
+.search:hover {
+	color: hsl(207, 91%, 30%);
+	color: #ddd;
+}
+
+.search::placeholder {
+	color: #b953bb;
+	color: white;
+}
+
+.search:focus {
+	outline: none;
+	background-color: #cb218e;
+}
+
+.overview {
+	padding: 2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	max-height: 100%;
+	overflow: auto;
+	opacity: 0;
+	transform: translateY(101%);
+	transition: transform 1s ease-in;
+}
+
+.movie:hover .overview {
+	transform: translateY(0);
+	opacity: 1;
+	color: black;
+	background-color: white;
+}
+
+.overview h4 {
+	margin-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+	h6 {
+		text-align: center;
+		justify-content: center;
+		color: white;
+		font-size: 1rem;
+	}
+	h6 a {
+		color: red;
+		font-size: 1rem;
+	}
+}
